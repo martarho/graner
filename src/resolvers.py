@@ -15,7 +15,7 @@ async def resolve_all_areas(parent, args, ctx, info):
 @Resolver("Query.area")
 async def resolve_one_area(parent, args, ctx, info):
     area = Areas().get_by_id(args["id"])
-    return {}
+    return area
 
 
 # Mutations
