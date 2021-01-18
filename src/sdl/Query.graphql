@@ -1,0 +1,34 @@
+type Phase {
+    id: Int!
+    name: String!
+    phase_start: String!
+    phase_end: String!
+    temperature_min: Int!
+    temperature_max: Int!
+    sunlight: String!
+}
+
+type Plant {
+    id: Int!
+    name: String!
+    variety: String!
+    seed_origin: String!
+    plant_type: String!
+    phases: [Phase!]!
+}
+
+type Area {
+    id: Int!
+    plants: [Plant!]
+    name: String!
+    location: String
+    size: String
+    area_type: String
+}
+
+type Query {
+    areas: [Area!]
+    area(id: Int!): Area
+    plant(id: Int!): Plant
+    phase(id: Int!): Phase
+}

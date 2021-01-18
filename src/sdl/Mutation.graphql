@@ -1,0 +1,11 @@
+input AreaInput {
+    id: Int!
+    name: String
+    location: String
+    size: String
+    area_type: String
+} 
+
+type Mutation {
+    updateArea(input: AreaInput!): Area!
+}
